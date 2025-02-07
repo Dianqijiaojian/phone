@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*  */
+.phone {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 400px;
+    height: 800px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    overflow: hidden;
+    border: 5px solid black;
+    /* transition: all 1s ease; */
+    cursor: pointer;
+}
+
+.phone_backgorundImage {
+    width: 100%;
+    height: 100%;
+    background-image: url(./手机_image/chaodiancipao.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.pm {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: left center; */
+    transform-origin: center bottom;
+    transition: all 1s ease;
+    position: relative;
+}
+
+@keyframes pm_rotate {
+
+    /* 翻页时候的颜色 */
+    0% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+.header_time {
+    margin-left: 20px;
+    /* 调整时间的位置 */
+}
+
+.header {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    /* align-content: center; */
+    cursor: pointer;
+    position: relative;
+}
+
+.header_02 {
+    position: absolute;
+    right: 30px;
+}
+
+.dl {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.dl>span {
+    font-size: 8px;
+}
+
+.dl1 {
+    width: 20px;
+    height: 10px;
+    /* background-color: white; */
+    border: 1px solid white;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.dl2 {
+    width: 2px;
+    height: 5px;
+    border-radius: 0 2px 2px 0;
+    background-color: white;
+    /*  */
+    position: absolute;
+    right: -2px;
+    top: 2px;
+}
+
+.phone_card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+}
+
+/* 下面是组件时间栏 */
+.moudle_time {
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    /* 分割线 */
+    display: flex;
+}
+
+.moudle_time_1 {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    /* 静态时间日期 */
+    border-right: 1px black dashed;
+}
+
+.moudle_time_2 {
+    flex: 1;
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    color: pink;
+    text-align: center;
+    line-height: 100px;
+}
+
+.moudle_time_span1 {
+    /* 动态时间 */
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.moudle_time_span2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.moudle_time_span3 {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+/* 组件时间栏 */
+.app {
+    width: 100%;
+    height: 380px;
+    /*  */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-content: center;
+    /* align-content: flex-start */
+    border-bottom: 1px solid black;
+}
+
+.nav_btn {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* position:fixed; */
+    position: absolute;
+}
+
+.background_test {
+    width: 15px;
+    height: 15px;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+.home {
+    width: 15px;
+    height: 15px;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 20%;
+
+}
+
+.exit {
+    display: inline-block;
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+    margin-left: 20%;
+    line-height: 50px;
+}
+
+/* 下拉头部 */
+.header_scroll {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    background-color: gray;
+    opacity: 0.9;
+    display: none;
+    z-index: 999;
+    flex-direction: column;
+}
+
+.header_scroll_pm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_scroll_time1 {
+    width: 100%;
+    height: 80px;
+    /* text-align: center; */
+}
+
+.header_scroll_time_01 {
+    width: 100px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.header_scroll_time_span1 {
+    font-size: 50px;
+    line-height: 80px;
+    color: white;
+}
+
+.header_scroll_time2 {
+    width: 100%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.downline {
+    border-bottom: 1px solid white;
+    margin: 10px;
+}
+
+.header_scroll_time_span2 {
+    font-size: 20px;
+    color: white;
+}
+
+.header_scroll_time_span2 {
+    color: white;
+}
+
+.header_scroll_time3 {
+    width: 100%;
+    height: auto;
+}
+
+.header_scroll_time_03 {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+.header_scroll_time_span3 {
+    color: white;
+    text-align: center;
+    font-size: 10px;
+}
+
+@keyframes header_scroll {
+    0% {
+        height: 0;
+    }
+
+    /* 30% {
+        height: 300px;
+    }
+    40% {
+        height: 400px;
+    }
+    60% {
+        height: 500px;
+    }
+    80% {
+        height: 600px;
+    } */
+    100% {
+        height: 100%;
+    }
+}
